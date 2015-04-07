@@ -1,0 +1,4 @@
+<h1>Create form of fields</h1>
+<%=form_for @form_of_fields, :url => :form_of_fields do |fof|%>
+    <%= render partial: 'fields', locals:  { f: fof }%>
+<% end %>

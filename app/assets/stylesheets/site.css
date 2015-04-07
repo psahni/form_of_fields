@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+    font-size: 13px;
+    color: #333;
+}
+
+
+div.content{
+    border: 1px solid #fbfbfb;
+    background-color: #fff;
+    max-width: 640px;
+    width: 96%;
+    padding: 2%;
+    margin: 2% 20%;
+    float: left;
+}
+
+.field{
+    margin-top: 20px;
+}
+
+.field  label{
+        width: 100px;
+        float: left;
+}
+
+.field input[type='text']{
+    width: 300px;
+}
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.add_fields{
+    padding: 20px 0px;
+}

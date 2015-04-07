@@ -1,0 +1,19 @@
+<h1>Create Item</h1>
+<%=form_for @item do |item_form|%>
+    <div class="field">
+      <%=item_form.label 'Name'%>
+      <%=item_form.text_field 'name'%>
+    </div>
+    <div class="field">
+      <%=item_form.fields_for :form_of_fields, item_form.object_id, child_index: item_form.object_id do |fof|%>
+          <%= render partial: 'form_of_fields/fields', locals:  { f: fof }%>
+      <% end %>
+    </div>
+    <div class="field">
+        <%#= link_to_add_fields "Add Field", item_form, :form_of_fields %>
+     </div>
+    <div class="field">
+      <%=item_form.submit 'Create'%>
+    </div>
+
+<% end %>
