@@ -10,3 +10,8 @@ $(document).on 'click', 'form .add_fields', (event) ->
   console.log(time);
   $(this).before($(this).data('fields').replace(regexp, time)).hide().slideDown();
   event.preventDefault()
+
+$(document).on "click", ".select_field_type", ->
+  if(['radio_button', 'check_box'].indexOf($(this).val())!=-1)
+    alert("Hey!!")
+

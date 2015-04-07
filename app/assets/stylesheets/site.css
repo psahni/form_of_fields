@@ -24,8 +24,9 @@ div.content{
 }
 
 .field  label{
-        width: 100px;
+        width: 115px;
         float: left;
+        margin-right: 20px;
 }
 
 .field input[type='text']{

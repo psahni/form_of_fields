@@ -1,5 +1,8 @@
 class FormOfField < ActiveRecord::Base
 
-  has_many :form_field_options, class_name: 'FormOfFields'
+  ## ONLY FOR RADIOBOXES AND CHECKBOXES
+
+  has_many :form_field_options
+
 
 end

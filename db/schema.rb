@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407122053) do
+ActiveRecord::Schema.define(version: 20150407135555) do
+
+  create_table "form_field_options", force: true do |t|
+    t.string   "field_label"
+    t.integer  "form_of_field_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "form_of_fields", force: true do |t|
     t.string   "field_label"

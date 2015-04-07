@@ -10,7 +10,8 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.form_of_fields.build
+    form_of_field = @item.form_of_fields.build
+    form_of_field.form_field_options.build
   end
 
   def create
