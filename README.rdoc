@@ -2,13 +2,13 @@
 
 === Ruby Version
     2.1.2
-    <tt>rvm install 2.1.2</tt>.
+    rvm install 2.1.2
 
 === clone the application
-    <tt>git clone git@github.com:psahni/form_of_fields.git</tt>
+    git clone git@github.com:psahni/form_of_fields.git
 
 === Create database
-    <tt>rake db:create</tt>
+    rake db:create
 
 === Run Migration
-    <tt>rake db:migrate</tt>
+    rake db:migrate
