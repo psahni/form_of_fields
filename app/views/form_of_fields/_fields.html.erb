@@ -7,18 +7,22 @@
 
     <div class="field">
       <%=f.label 'Field Type'%>
-      <%=f.select :field_type, options_for_select(['text_field', 'check_box', 'radio_button', 'file_field', 'text_area']), {:prompt => "--Select--"}, {:class => 'select_field_type'}%>
+      <%=f.select :field_type, options_for_select(Item::FIELDS), {:prompt => "--Select--"}, {:class => 'select_field_type'}%>
     </div>
 
-    <div class="field" style="margin-left:15px;">
-      <h4>Add Options</h4>
-      <%=f.fields_for :form_field_options do |ffo|%>
-          <%=ffo.label 'Checkbox 1 Label'%>
-          <%=ffo.text_field :field_label%>
-      <% end %>
+    <div style="margin-left: 20px;">
+        <div class="field">
+          <h4>Add Options</h4>
+          <%=f.fields_for :form_field_options, @form_of_field_option, child_index: @form_of_field_option.object_id  do |ffo|%>
+            <%=render :partial => 'items/form_field_options', locals: { f: ffo }%>
+          <% end %>
+        </div>
+      <%= link_to_add_fields "Add More Option", f, :form_field_options %>
     </div>
+
     <div class="field">
         <%= f.hidden_field :_destroy %>
         <%= link_to 'remove', '#', class: 'remove_fields' %>
     </div>
+
 </div>

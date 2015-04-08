@@ -5,7 +5,7 @@
       <%=item_form.text_field 'name'%>
     </div>
     <div class="field">
-      <%=item_form.fields_for :form_of_fields, item_form.object_id, child_index: item_form.object_id do |fof|%>
+      <%=item_form.fields_for :form_of_fields, @form_of_field, child_index: @form_of_field.object_id do |fof|%>
           <%= render partial: 'form_of_fields/fields', locals:  { f: fof }%>
       <% end %>
     </div>
