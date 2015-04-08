@@ -1,6 +1,10 @@
 <div class="form_fields">
   <div class="field">
-    <%=f.label 'Checkbox 1 Label'%>
+    <%=f.label 'Label 1'%>
     <%=f.text_field :field_label%>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :_destroy %>
+    <%= link_to 'remove', '#', class: 'remove_fields' %>
   </div>
 </div>

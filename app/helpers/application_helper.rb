@@ -9,5 +9,14 @@ module ApplicationHelper
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
+  def display_flash
+    message = ''
+    flash.each do |key, value|
+      message+= "<div class='alert alert-#{key}' timeout>"
+      message+=value
+      message+='</div>'
+    end
+    message.html_safe
+  end
 
 end

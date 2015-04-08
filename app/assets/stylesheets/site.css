@@ -9,6 +9,10 @@ body {
 }
 
 
+.row{
+    width: 100%;
+    float: left;
+}
 div.content{
     border: 1px solid #fbfbfb;
     background-color: #fff;
@@ -21,6 +25,7 @@ div.content{
 
 .field{
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .field  label{
@@ -42,5 +47,23 @@ div.content{
 }
 
 .add_fields{
-    padding: 20px 0px;
+
+}
+
+
+
+.alert {
+    padding: 20px;
+    border: 1px solid;
+}
+.alert-notice{
+    color: green;
+}
+
+.alert-error{
+    color: red;
+}
+
+.item-listing li{
+    padding: 10px;
 }

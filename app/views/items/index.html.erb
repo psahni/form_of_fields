@@ -1,4 +1,15 @@
-<h1>Displaying all forms</h1>
-<div>
+<h1>Displaying all items</h1>
+
+<div class="row">
+    <ul class="item-listing">
+    <% @items.each do |item| %>
+          <li>
+                <%=link_to item.name, item%>
+          </li>
+    <% end %>
+    </ul>
+</div>
+
+<div class="row">
   <%=link_to 'Create New', new_item_path%>
 </div>
