@@ -6,4 +6,5 @@ class Item < ActiveRecord::Base
 
   FIELDS = ['text_field', 'check_box', 'radio_button', 'file_field', 'text_area']
 
+  validates :name, :presence => true
 end

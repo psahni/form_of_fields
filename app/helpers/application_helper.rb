@@ -19,4 +19,7 @@ module ApplicationHelper
     message.html_safe
   end
 
+  def check_box_or_radio_button?(field_type)
+    ['check_box', 'radio_button'].include?(field_type)
+  end
 end

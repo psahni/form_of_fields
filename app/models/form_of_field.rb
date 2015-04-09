@@ -7,4 +7,7 @@ class FormOfField < ActiveRecord::Base
   accepts_nested_attributes_for :form_field_options,  allow_destroy: true
 
   attr_accessor :_destroy
+
+  validates :field_type, :field_label, :presence => true
+
 end

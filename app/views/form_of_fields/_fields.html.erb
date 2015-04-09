@@ -10,7 +10,7 @@
       <%=f.select :field_type, options_for_select(Item::FIELDS, f.object.field_type), {:prompt => "--Select--"}, {:class => 'select_field_type'}%>
     </div>
 
-    <div style="margin-left: 20px;display:<%=(f.object.field_type == 'check_box') ? 'block;' : 'none;'%>" id="checkbox_radio_labels">
+    <div style="margin-left: 20px;display:<%=check_box_or_radio_button?(f.object.field_type) ? 'block;' : 'none;'%>" id="checkbox_radio_labels">
         <div class="field">
           <h4>Add Labels for Options(radiobutton/checkbox)</h4>
           <%=f.fields_for :form_field_options do |ffo|%>
