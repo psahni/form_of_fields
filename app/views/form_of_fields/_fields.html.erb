@@ -8,17 +8,18 @@
     <div class="field">
       <%=f.label 'Field Type'%>
       <%=f.select :field_type, options_for_select(Item::FIELDS, f.object.field_type), {:prompt => "--Select--"}, {:class => 'select_field_type'}%>
-    </div>
-
-    <div style="margin-left: 20px;display:<%=check_box_or_radio_button?(f.object.field_type) ? 'block;' : 'none;'%>" id="checkbox_radio_labels">
+      <div style="margin-left: 20px;display:<%=check_box_or_radio_button?(f.object.field_type) ? 'block;' : 'none;'%>" class="checkbox_radio_labels">
         <div class="field">
           <h4>Add Labels for Options(radiobutton/checkbox)</h4>
-          <%=f.fields_for :form_field_options do |ffo|%>
-            <%=render :partial => 'items/form_field_options', locals: { f: ffo }%>
+          <%=f.fields_for :form_field_options, @form_of_field_option, child_index: @form_of_field_option.object_id  do |ffo|%>
+              <%=render :partial => 'items/form_field_options', locals: { f: ffo }%>
           <% end %>
         </div>
-      <%= link_to_add_fields "Add More Option", f, :form_field_options %>
+        <%= link_to_add_fields "Add Option", f, :form_field_options %>
+      </div>
     </div>
+
+
 
     <div class="field">
         <%= f.hidden_field :_destroy %>

@@ -32,11 +32,17 @@ class ItemsController < ApplicationController
   def update
     if @item.update_attributes(item_params)
       redirect_to [@item], notice: "Item has been updated successfully"
+    else
+      render :edit
     end
   end
 
   def destroy
-
+    if @item.destroy
+      redirect_to [:items], notice: "Item has been destroyed successfully"
+    else
+      redirect_to [@item], notice: "Item can not be destroyed"
+    end
   end
 
 

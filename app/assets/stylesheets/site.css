@@ -85,3 +85,15 @@ textarea{
 .help-inline{
     color: #800000;
 }
+
+.checkbox_radio_labels{
+    border: 1px solid;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+header{
+    margin-top: 2%;
+    margin-left: 2%;
+}

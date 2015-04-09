@@ -3,6 +3,7 @@
 </h2>
 <h3 class="pull-right">
   <%=link_to "Edit", edit_item_path(@item)%>
+  <%=link_to "Destroy", item_path(@item), :method => :delete%>
 </h3>
 <% @item.form_of_fields.each do |fof| %>
     <div class="label"><%=fof.field_label.capitalize%></div>

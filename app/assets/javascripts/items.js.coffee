@@ -6,12 +6,12 @@ $(document).on 'click', 'form .remove_fields', (event) ->
 $(document).on 'click', 'form .add_fields', (event) ->
   time = new Date().getTime()
   regexp = new RegExp($(this).data('id'), 'g')
-  $(this).before($(this).data('fields').replace(regexp, time)).hide().slideDown();
+  $(this).before($(this).data('fields').replace(regexp, time)).slideDown();
   event.preventDefault()
 
 $(document).on "click", ".select_field_type", ->
   if(['radio_button', 'check_box'].indexOf($(this).val())!=-1)
-    $("#checkbox_radio_labels").slideDown()
+    $(this).parents('.field:last').find(".checkbox_radio_labels").slideDown()
   else
-    $("#checkbox_radio_labels").slideUp()
+    $(this).parents('.field:last').next(".checkbox_radio_labels").slideUp()
 
