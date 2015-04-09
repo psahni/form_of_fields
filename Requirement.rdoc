@@ -1,0 +1,27 @@
+Create a application which lets you create dynamic web-form
+
+Database - free to choose any
+Rails version - free to choose any
+Ruby version - free to choose any
+
+As a user I should be able to create dynamic web forms. In the form I should be able to provide a label text, a input field(textarea, textfield, checkbox, radio button and file field). If I choose to have checkbox or radio button in the form, then it should also ask the front label for them. for example
+
+
+Field 1
+Label:          Which brand of shoes you buy
+Input fields:
+                here appear checkbox1 - Nike(this value should be taken from user)
+                here appear checkbox2 - Reebok(this value should be taken from user)
+                here appear checkbox1 - Puma(this value should be taken from user)
+
+
+
+Field 2
+Label:          Enter your email
+Input fields:
+                here appear textbox to enter email
+
+
+User can create, read, update and destroy the dynamic-form. Also, form created by the user can actually be used somewhere in the application.
+
+Think of it like as a admin you can create the registration form dynamically and users on your site would have  to fill that form to register. Rest you are free to assume anything around the functionality.
