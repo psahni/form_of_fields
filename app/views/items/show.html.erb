@@ -5,7 +5,7 @@
   <%=link_to "Edit", edit_item_path(@item)%>
 </h3>
 <% @item.form_of_fields.each do |fof| %>
-    <div class="label"><%=fof.field_label%></div>
+    <div class="label"><%=fof.field_label.capitalize%></div>
     <% if ['check_box', 'radio_button'].include?( fof.send(:field_type) )%>
         <% fof.form_field_options.each do |ffo|%>
             <%=render partial: "input_types/#{ fof.send(:field_type) }"%><%=ffo.field_label%>
