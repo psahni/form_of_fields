@@ -4,7 +4,9 @@ class FormOfField < ActiveRecord::Base
 
   has_many :form_field_options
 
-  accepts_nested_attributes_for :form_field_options,  allow_destroy: true
+  accepts_nested_attributes_for :form_field_options,
+                                allow_destroy: true,
+                                reject_if: proc { |attributes| attributes['field_label'].blank? }
 
   attr_accessor :_destroy
 

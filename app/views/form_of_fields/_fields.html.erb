@@ -11,7 +11,7 @@
       <div style="margin-left: 20px;display:<%=check_box_or_radio_button?(f.object.field_type) ? 'block;' : 'none;'%>" class="checkbox_radio_labels">
         <div class="field">
           <h4>Add Labels for Options(radiobutton/checkbox)</h4>
-          <%=f.fields_for :form_field_options, @form_of_field_option, child_index: @form_of_field_option.object_id  do |ffo|%>
+          <%=f.fields_for :form_field_options do |ffo|%>
               <%=render :partial => 'items/form_field_options', locals: { f: ffo }%>
           <% end %>
         </div>

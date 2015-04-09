@@ -1,11 +1,11 @@
-<%=form_for @item do |item_form|%>
+<%=form_for @item, :method => (@item.new_record? ? :post : :put ) do |item_form|%>
 
     <div class="field">
       <%=item_form.label 'Name'%>
       <%=item_form.text_field 'name'%>
     </div>
     <div class="field">
-      <%=item_form.fields_for :form_of_fields, @form_of_field, child_index: 1 do |fof|%>
+      <%=item_form.fields_for :form_of_fields do |fof|%>
           <%= render partial: 'form_of_fields/fields', locals:  { f: fof }%>
       <% end %>
     </div>

@@ -11,7 +11,15 @@ $(document).on 'click', 'form .add_fields', (event) ->
 
 $(document).on "click", ".select_field_type", ->
   if(['radio_button', 'check_box'].indexOf($(this).val())!=-1)
-    $(this).parents('.field:last').find(".checkbox_radio_labels").slideDown()
+    if($(".control-group.error").length)
+      $(this).parent().next(".checkbox_radio_labels").slideDown()
+    else
+     $(this).next(".checkbox_radio_labels").slideDown()
   else
-    $(this).parents('.field:last').next(".checkbox_radio_labels").slideUp()
+    if($(".control-group.error").length)
+      $(this).parent().next(".checkbox_radio_labels").slideUp()
+    else
+      $(this).next(".checkbox_radio_labels").slideUp()
+
+
 
