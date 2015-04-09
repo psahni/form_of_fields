@@ -12,3 +12,6 @@
 
 === Run Migration
     rake db:migrate
+
+=== Start the server
+    unicorn or rails server
